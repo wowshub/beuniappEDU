@@ -1,0 +1,65 @@
+{
+	"pages": [{
+		"path": "pages/tabbar/index/index",
+		"style": {
+			//"navigationBarTitleText": "在线教育"
+            "app-plus":{
+                "titleNView":false
+                
+            }
+		}
+	}    ,{
+            "path" : "pages/tabbar/learn/learn",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/tabbar/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "在线教育",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+    "tabBar":{
+        "borderStyle":"black",
+        "list":
+        [
+        {
+            "iconPath":"static/tabbar/index1.png",
+            "selectedIconPath":"static/tabbar/index1_selected.png",
+            "pagePath":"pages/tabbar/index/index",
+            "text":"首页"
+        },
+        {
+            "iconPath":"static/tabbar/learn.png",
+            "selectedIconPath":"static/tabbar/learn_selected.png",
+            "pagePath":"pages/tabbar/learn/learn",
+            "text":"学习"
+        },
+        {
+            "iconPath":"static/tabbar/home.png",
+            "selectedIconPath":"static/tabbar/home_selected.png",
+            "pagePath":"pages/tabbar/home/home",
+            "text":"个人"
+        }
+        ],
+        "color":"#BBBAC7",
+        "selectedColor":"#17A2B8"
+    }
+}
