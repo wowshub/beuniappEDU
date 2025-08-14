@@ -25,7 +25,7 @@
         </view>
 
         <scroll-view scroll-x="true"  class="scroll-row">
-            <course-list></course-list>
+            <course-list v-for="(item,index) in groupList" :key="index" :item="item" ></course-list>
         </scroll-view>
         
         
@@ -81,8 +81,22 @@
                    },
                    {name:"社区",
                    src:"/static/demo/icon/ask.png"
-                   }
-               ]
+                   },
+               ],
+               groupList:[
+                   	{
+                   		"group_id": 12,
+                   		"id": 19,
+                   		"title": "uni-app 商城全栈开发",
+                   		"cover": "http://...png",
+                   		"price": "¥4.00",
+                   		"t_price": "¥10.00",
+                   		"type": "media",
+                   		"start_time": "2021-04-15T16:00:00.000Z",
+                   		"end_time": "2022-05-16T16:00:00.000Z"
+                   	}
+                   	// ...
+                ]
 				// href: 'https://chatgpt.yangyanghub.com'
 			}
 		},

@@ -1,22 +1,39 @@
 <template>
 	<view class="scroll-row-item course course-two">
 		<view class="position-relative">
-            <image src="@/static/demo/cover/1.png"></image>
-            <view class="text-white font-sm">图文</view>
+<!--            <image :src="item.cover"></image> -->
+            <image src="/static/demo/cover/1.png "></image>
+            <view class="text-white font-sm">{{item.type | formatType}}</view>
         </view>
         <view class="flex flex-column flex-shrink"></view>
-            <text class="text-ellipsis font-md mt-1" style="width: 300rpx;">uni-app实战直播app开发</text>
+            <text class="text-ellipsis font-md mt-1" style="width: 300rpx;">{{item.title}}</text>
             <view class="font-sm text-light-muted my-1">10人已抢</view>
             <view class="flex flex-1 align-end">
-                <text class="font-md text-danger">¥100.00</text>
-                <text class="font-sm text-light-muted">¥200.00</text>
+                <text class="font-md text-danger">{{item.price}}</text>
+                <text class="font-sm text-light-muted">{{item.t_price}}</text>
             </view>
 	</view>
 </template>
 
 <script>
+    
+    let opt  = {
+        media:"图文",
+        audio:"音频",
+        video:"视频",
+        column:"专栏"
+           
+    }
 	export default {
 		name:"course-list",
+        props: {
+            item:Object,
+        },
+        filters: {
+            formatType(k){
+                return opt[k];
+            } 
+        },   
 		data() {
 			return {
 				
